@@ -21,7 +21,7 @@
 | **Multi-repo workspace** | Register multiple repositories and switch between them instantly |
 | **Engineer Agent** | Autonomous coding agent that reads, edits, and creates files inside your repo |
 | **Project Manager** | High-level planning agent that coordinates tasks across repositories |
-| **Bring Your Own LLM** | Azure OpenAI (GPT-4o / GPT-5 / Codex), Anthropic Claude, Kimi K2, and more |
+| **Bring Your Own LLM** | Direct OpenAI and Anthropic keys, Azure OpenAI, Anthropic Foundry on Azure, Kimi K2, and more |
 | **MCP Servers** | Extend agent capabilities with Model Context Protocol tool servers |
 | **Custom Skills** | Drop in SKILL.md files to teach agents domain-specific knowledge |
 | **Split-view Tabs** | VS Code-style grid layout — drag, drop, and split conversations freely |
@@ -32,7 +32,7 @@
 ### Prerequisites
 
 - Python 3.11+
-- An API key for at least one supported LLM provider
+- An API key for at least one supported LLM provider such as OpenAI, Anthropic, or Azure-hosted equivalents
 
 ### Installation
 
@@ -50,7 +50,7 @@ python -m client.main
 ### Quick Start
 
 1. **Add a repository** — click **+** in the Repositories panel and select a folder.
-2. **Configure an LLM** — click **+** in the LLM Clients panel and enter your provider credentials.
+2. **Configure an LLM** — click **+** in the LLM Clients panel and enter your OpenAI, Anthropic, Azure, or other supported provider credentials.
 3. **Start the engineer** — right-click the repo and choose *Start Engineer*.
 4. **Chat** — ask the agent to explain, refactor, or extend your code.
 

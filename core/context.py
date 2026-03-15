@@ -90,12 +90,18 @@ class AppContext:
 
     def _register_default_providers(self) -> None:
         """Import and register all built-in LLM provider classes."""
+        from .LLMClients.claude_on_anthropic import ClaudeOnAnthropicClient
         from .LLMClients.claude_on_azure import ClaudeOnAzureClient
+        from .LLMClients.gpt5_codex_on_openai import GPT5CodexOnOpenAIClient
         from .LLMClients.gpt5_codex_on_azure import GPT5CodexOnAzureClient
+        from .LLMClients.gpt5_on_openai import GPT5OnOpenAIClient
         from .LLMClients.gpt5_on_azure import GPT5OnAzureClient
         from .LLMClients.kimi_k2_thinking_on_azure import KimiK2ThinkingOnAzureClient
 
+        self.llm_provider_registry.register(ClaudeOnAnthropicClient)
         self.llm_provider_registry.register(ClaudeOnAzureClient)
+        self.llm_provider_registry.register(GPT5OnOpenAIClient)
+        self.llm_provider_registry.register(GPT5CodexOnOpenAIClient)
         self.llm_provider_registry.register(GPT5CodexOnAzureClient)
         self.llm_provider_registry.register(GPT5OnAzureClient)
         self.llm_provider_registry.register(KimiK2ThinkingOnAzureClient)
